@@ -6,7 +6,7 @@ go:
 install: true
 
 notifications:
-  email: false
+  email: true
 
 script:
  - go test github.com/xtimk/alGOs/naivepmatching
