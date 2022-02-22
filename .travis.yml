@@ -9,4 +9,4 @@ notifications:
   email: true
 
 script:
- - go test github.com/xtimk/alGOs/naivepmatching
+ - go test github.com/xtimk/alGOs/algos
