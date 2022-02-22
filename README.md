@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/xtimk/alGOs.svg?token=9yNzkmTjR26qHy4qyCXB&branch=master)](https://travis-ci.com/xtimk/alGOs) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/xtimk/alGOs/blob/master/LICENSE)
+[![Build Status](https://app.travis-ci.com/xtimk/alGOs.svg?token=9yNzkmTjR26qHy4qyCXB&branch=master)](https://app.travis-ci.com/xtimk/alGOs) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/xtimk/alGOs/blob/master/LICENSE)
 # GoLang Implementation of classic & advanced algorithms
 Classic and advanced algorithms implemented in Go.
 
