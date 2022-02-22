@@ -1,14 +1,10 @@
-package naivepmatching
+package algos
 
-import (
-	"fmt"
-)
-
-func Hi() string{
+func Hi() string {
 	return "Hi"
 }
 
-func Naive_pmatching(Text string, Pattern string) []int {
+func NaivePatternMatching(Text string, Pattern string) []int {
 
 	var matches []int
 	Text_pointer := 0
@@ -23,21 +19,19 @@ func Naive_pmatching(Text string, Pattern string) []int {
 		match_found := true
 		Text_pointer = Ipotetic_match
 		for x := range Pattern {
-			if Text[Text_pointer + x] != Pattern[x] {
+			if Text[Text_pointer+x] != Pattern[x] {
 				match_found = false
 				break
 			}
 		}
 		if match_found {
-			fmt.Println("Found a Match")
+			// fmt.Println("Found a Match")
 			matches = append(matches, Ipotetic_match)
 		} else {
-			fmt.Println("NOT a Match")
+			// fmt.Println("NOT a Match")
 		}
 		Ipotetic_match = Ipotetic_match + 1
 	}
-
-
 
 	// fmt.Println(string(Text[Text_pointer]))
 	// for t := range Text {
