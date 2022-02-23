@@ -1,10 +1,29 @@
 package algos
 
-func Hi() string {
-	return "Hi"
+func NaivePatternMatching(text string, pattern string) []int {
+	textIndex := 0
+	patternIndex := 0
+
+	var matches []int
+
+	for textIndex < len(text) {
+		possibleMatch := textIndex
+		for patternIndex < len(pattern) && text[textIndex] == pattern[patternIndex] {
+			patternIndex++
+			textIndex++
+		}
+
+		if patternIndex == len(pattern) {
+			matches = append(matches, possibleMatch)
+		}
+
+		textIndex = possibleMatch + 1
+		patternIndex = 0
+	}
+	return matches
 }
 
-func NaivePatternMatching(Text string, Pattern string) []int {
+func AnotherNaiveApproach(Text string, Pattern string) []int {
 
 	var matches []int
 	Text_pointer := 0
@@ -27,9 +46,9 @@ func NaivePatternMatching(Text string, Pattern string) []int {
 		if match_found {
 			// fmt.Println("Found a Match")
 			matches = append(matches, Ipotetic_match)
-		} else {
-			// fmt.Println("NOT a Match")
-		}
+		} // else {
+		// fmt.Println("NOT a Match")
+		// }
 		Ipotetic_match = Ipotetic_match + 1
 	}
 

@@ -1,6 +1,8 @@
 package main
 
 // import from github to re-use code
+// this file is an example of how to use algos package inside your own project
+
 import (
 	"fmt"
 
@@ -8,17 +10,37 @@ import (
 )
 
 func main() {
-	fmt.Println("Naive Pattern Matching")
+	fmt.Println("** Naive Pattern Matching **")
+	fmt.Println()
 	text := "accgaagcttacacggcgacgacgtcg"
 	pattern := "acg"
 	matches := algos.NaivePatternMatching(text, pattern)
-	algos.PrintMatches(text, pattern, matches)
+	fmt.Println("Text: ", text)
+	fmt.Println("Pattern: ", pattern)
+	fmt.Println("Pretty Print of Matches:")
+	algos.PrettyPrintMatches(text, pattern, matches)
 	fmt.Println("-----------------")
+	fmt.Println()
 
-	fmt.Println("\nLPS: Longest Prefix that is also a Suffix")
+	fmt.Println("** LPS: Longest Prefix that is also a Suffix ** ")
 	pattern = "abcdabca"
 	lps := algos.Lps(pattern)
-	fmt.Println(lps)
+	fmt.Println("Text: ", pattern)
+	fmt.Println("LPS: ", lps)
+	fmt.Println("-----------------")
+	fmt.Println()
+
+	fmt.Println("** KMP: Knuth Morris Pratt ** ")
+	text = "accgaagcttacacggcgacgacgtcg"
+	pattern = "acg"
+	matches = algos.Kmp(text, pattern)
+	fmt.Println("Text: ", text)
+	fmt.Println("Pattern: ", pattern)
+	// fmt.Println("Matches: ", matches)
+	fmt.Println("Pretty Print of Matches:")
+	algos.PrettyPrintMatches(text, pattern, matches)
+	fmt.Println("-----------------")
+	fmt.Println()
 }
 
 // Pretty print the matches

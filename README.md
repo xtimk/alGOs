@@ -21,6 +21,8 @@ This generates an executable file named `alGOs` (which is the main loop from the
 ## Algorithms
 Here are listed the implemented algorithms
 
-|Algorithm|Complexity parameters|Worst-Case time complexity|Avg-case time complexity|Best-case time complexity|Auxiliary space complexity|
-|---------|---------------------|-------------------------|------------------------|-|-|
-|Naive Exact Pattern-Matching|`t=\|Text\|` <br> `p=\|Pattern\|`|`Θ(t*p)`|`O(t*p)`|`O(1)`|
+|Algorithm|Description|Complexity parameters|Worst-Case time complexity|Avg-case time complexity|Best-case time complexity|Auxiliary space complexity|
+|---------|-|--------------------|-------------------------|------------------------|-|-|
+|Naive Exact Pattern-Matching|Pattern matching algorithm|`t=\|Text\|`  <br>  `p=\|Pattern\|`|`Θ(t*p)`|`O(t*p)`|`O(t)`|`O(1)`|
+|LPS|Longest Prefix that is also a suffix|`t=\|Text\|`|`Θ(t)`|`O(t)`|`O(t)`|`O(1)`|
+|KMP|Knuth Morris Pratt algorithm for exact pattern matching. Makes use of the LPS algorithm up here|`t=\|Text\|`  <br>  `p=\|Pattern\|`|`Θ(t+p)`|`O(t+p)`|`O(t)`|`O(p)`|
