@@ -1,21 +1,15 @@
 [![Build Status](https://app.travis-ci.com/xtimk/alGOs.svg?token=9yNzkmTjR26qHy4qyCXB&branch=master)](https://app.travis-ci.com/xtimk/alGOs) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/xtimk/alGOs/blob/master/LICENSE)
 # GoLang Implementation of classic & advanced algorithms
-Classic and advanced algorithms implemented in Go.
+Classic and advanced algorithms implemented in GoLang.
 
-## Building
-```go
-go build
-```
-This generates an executable file named `alGOs` (which is the main loop from the `algos.go` file)
-
-## Testing
+## Testing the package
 ```bash
-./run_tests.sh
+go test github.com/xtimk/alGOs/algos
 ```
 
-## Run
+## Run the main example
 ```bash
-./alGOs
+go run main_example.go
 ```
 
 ## Algorithms
