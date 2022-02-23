@@ -20,7 +20,8 @@ func Test_LPS_aca(t *testing.T) {
 	got := Lps(pattern)
 	expected := []int{0, 0, 1}
 	if !eqSlices(got, expected) {
-		t.Errorf("Failed Test_no_match_1 func")
+		errorString := fmt.Sprint("Failed test ", getCurrentFuncName(), ": ", "got: ", got, " - Expected: ", expected)
+		t.Errorf(errorString)
 	}
 }
 
@@ -29,6 +30,7 @@ func Test_LPS_aaaaaa(t *testing.T) {
 	got := Lps(pattern)
 	expected := []int{0, 1, 2, 3, 4, 5, 6}
 	if !eqSlices(got, expected) {
-		t.Errorf("Failed Test_no_match_1 func")
+		errorString := fmt.Sprint("Failed test ", getCurrentFuncName(), ": ", "got: ", got, " - Expected: ", expected)
+		t.Errorf(errorString)
 	}
 }
