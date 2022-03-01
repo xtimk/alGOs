@@ -26,13 +26,33 @@ func PrettyPrintMatches(text string, pattern string, matches []int) {
 	}
 }
 
+func PrettyPrintZArray(text string, matches []int) {
+	// fmt.Println(text)
+	for i, match := range matches {
+		if match != 0 {
+			prettyStringMatch := createEmptyString(len(text))
+			stringFromStart := text[0:match]
+			stringToPrint := substituteStringAtIndex(prettyStringMatch, stringFromStart, 0)
+			stringToPrint = substituteStringAtIndex(stringToPrint, stringFromStart, i)
+			fmt.Println(text)
+			fmt.Println(stringToPrint)
+			fmt.Println()
+		}
+	}
+}
+
 func createEmptyString(length int) string {
 	result := strings.Repeat(" ", length)
 	return result
 }
 
+func createEmptyStringMinus(length int) string {
+	result := strings.Repeat("x", length)
+	return result
+}
+
 func substituteStringAtIndex(text string, sub string, index int) string {
-	return text[:index] + sub + text[index+1-len(sub):]
+	return text[:index] + sub + text[index+len(sub):]
 }
 
 func getCurrentFuncName() string {
