@@ -41,6 +41,16 @@ func main() {
 	algos.PrettyPrintMatches(text, pattern, matches)
 	fmt.Println("-----------------")
 	fmt.Println()
+
+	fmt.Println("** ZFunc: Z array computation ** ")
+	text = "accgaagcttacacggcgacgacgtcg"
+	matches = algos.Zfunc(text)
+	fmt.Println("Text: ", text)
+	fmt.Println("ZArray: ", matches)
+	fmt.Println("Pretty Print of ZArray:")
+	algos.PrettyPrintZArray(text, matches)
+	fmt.Println("-----------------")
+	fmt.Println()
 }
 
 // Pretty print the matches
