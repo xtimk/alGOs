@@ -18,5 +18,6 @@ Here are listed the implemented algorithms
 |Algorithm|Description|Complexity parameters|Worst-Case time complexity|Avg-case time complexity|Best-case time complexity|Auxiliary space complexity|
 |---------|-|--------------------|-------------------------|------------------------|-|-|
 |Naive Exact Pattern-Matching|Pattern matching algorithm|`t=\|Text\|`  <br>  `p=\|Pattern\|`|`Θ(t*p)`|`O(t*p)`|`O(t)`|`O(1)`|
-|LPS|Longest Prefix that is also a suffix|`t=\|Text\|`|`Θ(t)`|`O(t)`|`O(t)`|`O(1)`|
-|KMP|Knuth Morris Pratt algorithm for exact pattern matching. Makes use of the LPS algorithm up here|`t=\|Text\|`  <br>  `p=\|Pattern\|`|`Θ(t+p)`|`O(t+p)`|`O(t)`|`O(p)`|
+|`LPS`|Longest Prefix that is also a suffix|`t=\|Text\|`|`Θ(t)`|`O(t)`|`O(t)`|`O(1)`|
+|`KMP`|Knuth-Morris-Pratt algorithm for exact pattern matching. Uses the `LPS` algorithm|`t=\|Text\|`  <br>  `p=\|Pattern\|`|`Θ(t+p)`|`O(t+p)`|`O(t)`|`O(p)`|
+|`ZFunc`|Algorithm to calc the `Z-array` of a given string|`t=\|Text\|`|`Θ(t)`|`O(t)`|`O(t)`|`O(t)`|
