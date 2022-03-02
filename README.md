@@ -21,3 +21,4 @@ Here are listed the implemented algorithms
 |`LPS`|Longest Prefix that is also a suffix|`t=\|Text\|`|`Θ(t)`|`O(t)`|`O(t)`|`O(1)`|
 |`KMP`|Knuth-Morris-Pratt algorithm for exact pattern matching. Uses the `LPS` algorithm|`t=\|Text\|`  <br>  `p=\|Pattern\|`|`Θ(t+p)`|`O(t+p)`|`O(t)`|`O(p)`|
 |`ZFunc`|Algorithm to calc the `Z-array` of a given string|`t=\|Text\|`|`Θ(t)`|`O(t)`|`O(t)`|`O(t)`|
+|`Z Algorithm`| Exact pattern matching, using `ZFunc` |`t=\|Text\|`  <br>  `p=\|Pattern\|`|`Θ(t+p)`|`O(t+p)`|`O(t+p)`|`O(t+p)`|
