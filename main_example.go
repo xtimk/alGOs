@@ -36,7 +36,7 @@ func main() {
 	matches = algos.Kmp(text, pattern)
 	fmt.Println("Text: ", text)
 	fmt.Println("Pattern: ", pattern)
-	// fmt.Println("Matches: ", matches)
+	fmt.Println("Matches: ", matches)
 	fmt.Println("Pretty Print of Matches:")
 	algos.PrettyPrintMatches(text, pattern, matches)
 	fmt.Println("-----------------")
@@ -51,6 +51,23 @@ func main() {
 	algos.PrettyPrintZArray(text, matches)
 	fmt.Println("-----------------")
 	fmt.Println()
+
+	fmt.Println("** Z Algorihtm: Exact pattern matching ** ")
+	text = "accgaagcttacacggcgacgacgtcg"
+	pattern = "acg"
+	zmatches, err := algos.Z(text, pattern)
+	fmt.Println("Text: ", text)
+	fmt.Println("Pattern: ", pattern)
+	fmt.Println("Matches: ", zmatches)
+	if err == nil {
+		fmt.Println("Pretty Print of Matches:")
+		algos.PrettyPrintMatches(text, pattern, zmatches)
+	} else {
+		fmt.Println("Error encountered: " + err.Error())
+	}
+	fmt.Println("-----------------")
+	fmt.Println()
+
 }
 
 // Pretty print the matches
